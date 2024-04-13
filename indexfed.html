@@ -9,6 +9,7 @@
   <div class="all">
     <form action="https://api.web3forms.com/submit" method="POST" class="formdiv">
       <div class="alll">
+        <label for="">Ihre fedback</label>
         <input type="hidden" name="access_key" value="d63f6ca0-5303-4da8-ab05-6a5c88b7b224">
     <input class="name" type="name" placeholder="Ihre Name">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
@@ -20,7 +21,9 @@
     <textarea class="masseg" name="Masseg" placeholder="ihre fedback 
     Kein schlechtes Gerede">
 </textarea>
+<div class="buttdiv">
 <button class="butt" type="submit">Send</button>
+</div>
     </div>
     </form>
   </div>
@@ -28,8 +31,10 @@
 </html>
 <style>
   body{
-background-image: url(window.png);
-        background-position: center;
+    background-color: ;
+  }
+  body{ 
+    background-position: center;
     background-size: cover;
   }
   .all, .formdiv{
@@ -50,8 +55,9 @@ background-image: url(window.png);
     background-color: ;
   }
   .masseg{
-    height: 25vh;
-    padding: 5vh;
+    height: 10vh;
+    overflow: auto;
+    padding: 7vh;
     text-align: center;
     border-color: white;
   }
@@ -60,6 +66,15 @@ background-image: url(window.png);
     padding: 10px;
     background-color: blue;
   }
+  .butt:hover{
+    background-color: green;
+  }
+  .buttdiv{
+    background-color: rgb(160, 128, 128);
+  }
+  .buttdiv:hover{
+    background-color: rgb(242, 242, 248);
+  }
  .alll, .formdiv{
     text-align: center;
     background-color: rgb(190, 190, 168);
@@ -67,6 +82,18 @@ background-image: url(window.png);
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+  }
+  .name{
+    background-color: rgb(252, 248, 248);
+    color: black;
+    border-radius: 25px;
+  }
+  .masseg{
+    border: 2px solid black;
+    border-radius: 15px;
+  }
+  .masseg:hover{
+    contain: iska jir;
   }
 </style>
 
