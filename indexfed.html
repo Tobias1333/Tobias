@@ -6,26 +6,6 @@
   <title>Document</title>
 </head>
 <body>
-<div class="all2">
-<div class="minudiv">
-    <a href="indexbro.html">
-    <img class="minu" src="minu.png.png" alt="">
-    </a>
-</div>
-<div>
-    <a class="hom" href="">Home</a>
-    <a class="hom" href="https://qualifutura.ch/team/">Qulifutura</a>
-</div>
-<div class="buttdiv">
-    <button class="butt" onclick="showhid()">German</button>
-    <a class="link" id="link" href="indexsom.html">Somali</a>
-    <a class="link" id="link" href="">Chana</a>
-    <a class="link" id="link" href="">English</a>
-    <a class="link" id="link" href="">Arabic</a>
-
-</div>
-</div>
-</br>
   <div class="all">
     <form action="https://api.web3forms.com/submit" method="POST" class="formdiv">
       <div class="alll">
@@ -58,19 +38,8 @@
     background-position: center;
     background-size: cover;
   }
-  .all, .formdiv{
-
+  .all{
   }
-  .all2{
-height: 6vh;
-background-color: rgb(136, 136, 114);
-    box-shadow: 8px 8px 10px;
-    display: flex;
-    justify-content: space-between;
-    display: sticky;
-    top: 0;
-    padding: 20px;
-}
 .hom{
     margin: 7px;
     font-size: 26px;
@@ -86,22 +55,27 @@ background-color: rgb(136, 136, 114);
 .all2:hover .link{
     display: block;
 }
-.minu{
-    width: 20px;
-}
   .name, .masseg{
     margin: 8px ;
     display: block;
+
+  }
+  .masseg::placeholder{
+    color: black;
+  }
+  .name::placeholder{
+    color: black;
   }
   .name{
     height: 7vh;
-    width: 50vh;
+    width: 40vh;
     text-align: center;
     border-color: white;
   }
   .name, .masseg:hover{
     color: black;
     background-color: ;
+    
   }
   .masseg{
     height: 10vh;
@@ -113,16 +87,17 @@ background-color: rgb(136, 136, 114);
   .butt{
     width: 20vh;
     padding: 10px;
-    background-color: blue;
+    background-color: rgb(8, 8, 216);
+    color: white;
   }
   .butt:hover{
     background-color: green;
   }
   .buttdiv{
-    background-color: rgb(160, 128, 128);
+    background-color: black;
   }
   .buttdiv:hover{
-    background-color: rgb(242, 242, 248);
+    background-color: red;
   }
  .alll, .formdiv{
     text-align: center;
@@ -159,10 +134,10 @@ const validate = () => {
   $result.text('');
 
   if(validateEmail(email)){
-    $result.text(email + ' ist richtig.');
+    $result.text(email + ' erfolgreich.');
     $result.css('color', 'green');
   } else{
-    $result.text(email + ' noch übrig.');
+    $result.text(email + ' eingeben.');
     $result.css('color', 'red');
   }
   return false;
