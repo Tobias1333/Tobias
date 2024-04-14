@@ -3,131 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>index</title>
-    <link rel="stylesheet" href="baro.css">
+    <title>Af somali</title>
 </head>
 <body>
-    <div class="all">
-        <div class="minudiv">
-            <a href="indexbro.html">
-            <img class="minu" src="minu.png.png" alt="">
-            </a>
-        </div>
-        <div>
-            <a class="hom" href="">Guriga</a>
-            <a class="hom" href="https://qualifutura.ch/team/">Qulifutura</a>
-        </div>
-        <div class="buttdiv">
-            <button class="butt" onclick="showhid()">jarmal</button>
-            <a class="link" id="link" href="IMG_20240409_143313.jpg">Somali</a>
-            <a class="link" id="link" href="">jayniis</a>
-            <a class="link" id="link" href="">ingriis</a>
-            <a class="link" id="link" href="">carabi</a>
-
-        </div>
-    </div>
-    <br>
-    <div>
-        <h1>Magacaygu waa abdiaziz
-        websitekaan wuxuu gaar u yahay aniga</h1>
-        <i>kaliya waa barasho oo kaliya website kaan</i>
-    </div>
-    <div class="imgdiv">
-    <div class="mardiv">
-        <img class="mar" src="Marusso-Mavris.jpg" alt="">
-        <img class="mar" src="QF_Monika-Wolf.jpg" alt="">
-        <img class="mar" src="QF_Anna-Bouwmeester.jpg" alt="">
-        <img class="mar" src="iFabian-von-Bueren.jpg" alt="">
-        <img class="mar" src="Franziska-Kunz.jpg" alt="">
-        <img class="mar" src="Tobias-Jaun.jpg" alt="">
-
-    </div>
-    </div>
-    <div class="butdiv">
-        <a href="indexfed.html">
-        <button class="but">Falcelin</button>
-        </a>
-    </div>
-    <script src="script.js"></script>
+<div class="all">
+  <div class="minudiv">
+    <img class="minu" src="minu.png.png" alt="">
+</div>
+    <div class="searchdiv">
+ <input class="search" type="text"
+    placeholder="raadi">
+<button onclick="search()" id="search" class="searchbutt">Raadi</button>
+ </div>
+<div class="linkdiv">
+    <button class="Deutsch">jarmal</button>
+    <a class="link" href="indexsom.html">AfSomali</a>
+    <a class="link" href="">ingriisi</a>
+    <a class="link" href="">carabi</a>
+</div>
+</div>
+<div class="halldiv">
+    <strong class="hall">
+        <strong>KU SOO DHAWAAW BOGEENA</strong>
+    </strong>
+</div>
+<div class="fabodiv">
+    <h6>Dhamaan Sawirdan waxaa iska leh qualifutura
+     qualifutura halkan Guji fadlan <a class="" href="https://qualifutura.ch/team/"></a></h6>
+    <img class="fabo" src="Tobias-Jaun.jpg" alt="">
+    <img class="fabo" src="Marusso-Mavris.jpg" alt="">
+    <img class="fabo" src="iFabian-von-Bueren.jpg" alt="">
+    <img class="fabo" src="QF_Monika-Wolf.jpg" alt="">
+    <img class="fabo" src="QF_Anna-Bouwmeester.jpg" alt="">
+    <img class="fabo" src="Ines_Waelti.jpg" alt="">
+</div>
+<div class="buttdiv">
+    <h5>Hadii aad rabto inaad wax ila wadaagto ama
+        rayigaaga fadlan halkan guji
+    </h5>
+    <a href="indexfed.html">
+    <button class="butt">Falcelin</button>
+    </a>
+</div>
 </body>
 </html>
 
-
 <style>
     body{
-    margin: 0;
-    padding: 0;
-    background-image: url(window.png);
-}
-.all{
-height: 6vh;
-background-color: yellow;
-    box-shadow: 8px 8px 10px;
-    display: flex;
-    justify-content: space-between;
-    border: 2px solid black;
-}
-.minu{
-    width: 20px;
-}
-.hom{
-    border: 1px solid black;
-    border-radius: 10px;
-    border-color: blue;
-    font-size: 16px;
-    text-decoration: none;
-    margin: 15px;
-    color: rgb(78, 21, 185);
-}
-.link{
-    display: block;
-    background-color: rgb(207, 192, 192);
-    color: black;
-    box-shadow: 5px 8px 10px;
-    text-decoration: none;
-}
-.link{
-    display: none;
-}
-.all:hover .link{
-    display: block;
-}
-.buttdiv{
-margin-top: 5px;
-    box-shadow: 5px 8px 10px;
-    padding-right: 5vh;
-}
-.butt{
-    color: black;
-    background-color: whitesmoke;
-    font-size: 16px;
-    background-color: rgb(37, 158, 158);
-    color: white;
-}
-.mar{
-    width: 20vh;
-}
-.mardiv{
-    border: 2px solid black;
-    border-radius: 50px;
+        margin: 0;
+        background-image: url(window.png);
+    }
+    .all{
+        display: flex;
+        background-color: rgba(111, 117, 110, 0.5);
+        display: sticky;
+        top: 0;
+        justify-content: space-between;
+        height: 9vh;
+    }
+    .minu{
+        width: 50px;
+        margin: 5px;
+        background-color: rgba(166, 173, 165, 0.514);
+        border-radius: 15px;
+    }
+    .Deutsch{
+        background-color: red;
+        height: 5vh;
+        margin: 5px;
+    }
+    .qualifutura{
+        font-size: 16px;
+    }
+    .link{
+        display: none;
+        background-color: aquamarine;
+        box-shadow: 7px 7px 25px;
+        text-align: center;
+        margin: 5px;
+    }
+    .all:hover .link{
+        display: block;
+    }
+    .search{
+        height: 4vh;
+        border: 1px solid black;
+        text-align: center;
+        background-color: antiquewhite;
+    }
+    .searchbutt{
+        background-color: black;
+        color: white;
+    }
+    .searchdiv{
+        margin: 9px;
+    }
+    .halldiv .hall{
+        display: flex;
+        background-color: yellow;
+        justify-content: center;
+        margin-top: 5px;
+        font-size: xx-large;
+    }
+    .fabo{
+        width: 150px;
+    }
+    .fabodiv{
+        margin-top: 30px;
+    }
 
-}
-.imgdiv{
-    overflow: auto;
-    outline: auto;
-
-}
-.but{
-    width: 30vh;
-    background-color: red;
-    color: white;
-    border-color: white;
-    height: 5vh;
-    
-}
-.butdiv{
-    text-align: center;
-    padding-top: 5vh;
-}
+    .butt{
+        height: 5vh;
+        color: rgb(236, 230, 230);
+        background-color: blue;
+    }
+    .buttdiv{
+        text-align: center;
+    }
 
 </style>
+<script>
+        function search(){
+            alert("wali waxba lama galin Hadaad ani i raadinayo moyee");
+        }
+</script>
