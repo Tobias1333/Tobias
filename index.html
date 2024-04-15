@@ -15,12 +15,16 @@
     placeholder="Such">
 <button onclick="search()" id="search" class="searchbutt">Such</button>
  </div>
-<div class="linkdiv">
-    <button class="Deutsch">Deutsch</button>
+ <nav>
+  <div class="deutdiv">
+    <button onclick="tus()" class="deut">Deutsch</button>
+  </div>
+  <div id="link" class="linkdiv">
     <a class="link" href="indexsom.html">Somali</a>
     <a class="link" href="">English</a>
     <a class="link" href="">Arabic</a>
 </div>
+</nav>
 </div>
 <div class="halldiv">
     <strong class="hall">
@@ -29,7 +33,7 @@
 </div>
 <div class="fabodiv">
     <h6>Hallo alle diese photo sind qualifutura
-     zur qualifutura website Click hier <a class="" href="https://qualifutura.ch/">qualifutura</a></h6>
+     zur qualifutura website Click hier <a class="qualifutura" href="https://qualifutura.ch/">qualifutura</a></h6>
     <img class="fabo" src="Tobias-Jaun.jpg" alt="">
     <img class="fabo" src="Marusso-Mavris.jpg" alt="">
     <img class="fabo" src="iFabian-von-Bueren.jpg" alt="">
@@ -47,12 +51,23 @@
 </div>
 </body>
 </html>
+<script>
+  function tus(){
+    var link = document.getElementById("link");
+    if (link.style.display === "none") {
+      link.style.display = "block";
+    }
+    else{
+      link.style.display = "none"
+    }
+  }
+</script>
 
 <style>
     body{
         margin: 0;
         background-image: url(window.png);
-    }
+     }
     .all{
         display: flex;
         background-color: rgba(111, 117, 110, 0.5);
@@ -67,27 +82,37 @@
         background-color: rgba(166, 173, 165, 0.514);
         border-radius: 15px;
     }
-    .Deutsch{
+    .deut{
         background-color: red;
         height: 5vh;
         margin: 5px;
     }
+    .deutdiv, .linkdiv{
+
+    }
     .qualifutura{
-        font-size: 16px;
+        font-size: 19px;
+        color: blue;
     }
     .link{
-        display: none;
+      display: block;
+      text-decoration: none;
         background-color: aquamarine;
-        box-shadow: 7px 7px 25px;
+        box-shadow: 5px 5px 5px;
         text-align: center;
         margin: 5px;
+        color: black;
+    }
+    .link, .deut{
+      display: block;
+    }
+    .linkdiv{
+      background-color: aquamarine;
+      box-shadow: 5px 5px 5px;
     }
     h5{
         color: white;
         background-color: black;
-    }
-    .all:hover .link{
-        display: block;
     }
     .search{
         height: 4vh;
@@ -112,8 +137,25 @@
     .fabo{
         width: 150px;
     }
+    @keyframes back {
+      10%{
+        background-color: red;
+      }
+      30%{
+        background-color: green;
+      }
+      23%{
+        background-color: blue;
+
+      }
+      40%{
+        background-color: yellow;
+      }
+
+    }
     .fabodiv{
         margin-top: 30px;
+        animation: back 2s linear infinite;
     }
 
     .butt{
