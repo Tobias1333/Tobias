@@ -1,208 +1,175 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-<div class="all">
-  <div class="minudiv">
-    <img class="minu" src="minu.png.png" alt="">
-</div>
-    <div class="searchdiv">
- <input class="search" type="text"
-    placeholder="Such">
-<button onclick="search()" id="search" class="searchbutt">Such</button>
- </div>
- <nav>
-  <div class="deutdiv">
-    <button onclick="serach()" class="deut">Deutsch</button>
+<iDOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+  </head>
+  <body>
+  <div class="all">
+    <div class="minudiv">
+      <img class="minu" src="minu.png.png" alt="">
   </div>
-  <div id="link" class="linkdiv">
-    <a class="link" href="indexsom.html">Somali</a>
-    <a class="link" href="">English</a>
-    <a class="link" href="">Arabic</a>
-</div>
-</nav>
-</div>
-<div class="halldiv">
-    <strong class="hall">
-        Hallo wilkomen
-    </strong>
-</div>
-<div class="fabodiv">
-    <h6>Hallo alle diese photo sind qualifutura
-     zur qualifutura website Click hier <a class="qualifutura" href="https://qualifutura.ch/">qualifutura</a></h6>
-    <img class="fabo" src="Tobias-Jaun.jpg" alt="">
-    <img class="fabo" src="Marusso-Mavris.jpg" alt="">
-    <img class="fabo" src="iFabian-von-Bueren.jpg" alt="">
-    <img class="fabo" src="QF_Monika-Wolf.jpg" alt="">
-    <img class="fabo" src="QF_Anna-Bouwmeester.jpg" alt="">
-    <img class="fabo" src="Ines_Waelti.jpg" alt="">
-</div>
-<div class="buttdiv">
-    <h5>wenn Sie Ihre Meinung äußern möchten hier bitte
-        aber keine schlechtes gerede
-    </h5>
-    <a href="indexfed.html">
-    <button class="butt">Feedback</button>
-    </a>
-</div>
-</body>
-</html>
-<script>
-  function tus(){
-    var link = document.getElementById("link");
-    if (link.style.display === "none") {
-      link.style.display = "block";
+      <div class="searchdiv">
+   <input class="search" type="text"
+      placeholder="Such">
+  <button onclick="search()" id="search" class="searchbutt">Such</button>
+   </div>
+   <nav>
+    <div class="deutdiv">
+      <button onclick="tus()" class="deut">Deutsch</button>
+    </div>
+    <div id="link" class="linkdiv">
+      <a class="link" href="indexsom.html">Somali</a>
+      <a class="link" href="">English</a>
+      <a class="link" href="">Arabic</a>
+  </div>
+  </nav>
+  </div>
+  <div class="halldiv">
+      <strong class="hall">
+          Hallo wilkomen
+      </strong>
+  </div>
+  <div class="fabodiv">
+      <h6>Hallo alle diese photo sind qualifutura
+       zur qualifutura website Click hier <a class="qualifutura" href="https://qualifutura.ch/">qualifutura</a></h6>
+      <img class="fabo" src="Tobias-Jaun.jpg" alt="">
+      <img class="fabo" src="Marusso-Mavris.jpg" alt="">
+      <img class="fabo" src="iFabian-von-Bueren.jpg" alt="">
+      <img class="fabo" src="QF_Monika-Wolf.jpg" alt="">
+      <img class="fabo" src="QF_Anna-Bouwmeester.jpg" alt="">
+      <img class="fabo" src="Ines_Waelti.jpg" alt="">
+  </div>
+  <div class="buttdiv">
+      <h5>wenn Sie Ihre Meinung äußern möchten hier bitte
+          aber keine schlechtes gerede
+      </h5>
+      <a href="indexfed.html">
+      <button class="butt">Feedback</button>
+      </a>
+  </div>
+  </body>
+  </html>
+  <script>
+    function tus(){
+      var link = document.getElementById("link");
+      if (link.style.display === "none") {
+        link.style.display = "block";
+      }
+      else{
+        link.style.display = "none"
+      }
     }
-    else{
-      link.style.display = "none"
-    }
-  }
-</script>
-
-<style>
-    body{
-        margin: 0;
-        background-image: url(window.png);
-     }
-    .all{
-        display: flex;
-        background-color: rgba(111, 117, 110, 0.5);
-        display: sticky;
-        top: 0;
-        justify-content: space-between;
-        height: 9vh;
-    }
-    .minu{
-        width: 50px;
-        margin: 5px;
-        background-color: rgba(166, 173, 165, 0.514);
-        border-radius: 15px;
-    }
-    .deut{
-        background-color: red;
-        height: 9vh;
-        width: 7vh;
-        margin: 5px;
-    }
-    .qualifutura{
-        font-size: 19px;
-        color: blue;
-    }
-    .link{
-      display: block;
-      text-decoration: none;
+  </script>
+  
+  <style>
+      body{
+          margin: 0;
+          background-image: url(window.png);
+       }
+      .all{
+          display: flex;
+          background-color: rgba(111, 117, 110, 0.5);
+          display: sticky;
+          top: 0;
+          justify-content: space-between;
+          height: 9vh;
+      }
+      .minu{
+          width: 50px;
+          margin: 5px;
+          background-color: rgba(166, 173, 165, 0.514);
+          border-radius: 15px;
+      }
+      .deut{
+          background-color: red;
+          height: 5vh;
+          margin: 5px;
+      }
+      .qualifutura{
+          font-size: 19px;
+          color: blue;
+      }
+      .link{
+        display: block;
+        text-decoration: none;
+          background-color: aquamarine;
+          box-shadow: 5px 5px 5px;
+          text-align: center;
+          margin: 5px;
+          color: black;
+      }
+      .link, .deut{
+        display: block;
+      }
+      .linkdiv{
         background-color: aquamarine;
         box-shadow: 5px 5px 5px;
-        text-align: center;
-        margin: 5px;
-        color: black;
-    }
-    .link, .deut{
-      display: block;
-    }
-    .linkdiv{
-      background-color: aquamarine;
-      box-shadow: 5px 5px 5px;
-    }
-    h5{
-        color: white;
-        background-color: black;
-    }
-    .search{
-        height: 4vh;
-        border: 1px solid black;
-        text-align: center;
-        background-color: antiquewhite;
-    }
-    .searchbutt{
-        background-color: black;
-        color: white;
-    }
-    .searchdiv{
-        margin: 9px;
-    }
-    .halldiv .hall{
-        display: flex;
-        background-color: yellow;
-        justify-content: center;
-        margin-top: 5px;
-        font-size: xx-large;
-    }
-    .fabo{
-        width: 150px;
-    }
-    @keyframes back {
-      10%{
-        background-color: red;
       }
-      30%{
-        background-color: green;
+      h5{
+          color: white;
+          background-color: black;
       }
-      23%{
-        background-color: blue;
-
+      .search{
+          height: 4vh;
+          border: 1px solid black;
+          text-align: center;
+          background-color: antiquewhite;
+          height: 5vh;
       }
-      40%{
-        background-color: yellow;
+      .searchbutt{
+          background-color: black;
+          color: white;
+          height: 5vh;
+          width: 15vh
       }
-
-    }
-    .fabodiv{
-        margin-top: 30px;
-        animation: back 2s linear infinite;
-    }
-
-    .butt{
-        height: 5vh;
-        color: rgb(236, 230, 230);
-        background-color: blue;
-    }
-    .buttdiv{
-        text-align: center;
-    }
-
-</style>
-<script>
-function search() {
-    // Suchbegriff aus dem Eingabefeld abrufen
-    var keyword = document.getElementById("searchInput").value.toLowerCase();
-    
-    var items = [
-    { name: "Tobias", image: "Tobias-jaun.jpg" },
-        { name: "Marusso", image: "Marusso-Mavris.jpg" },
-        { name: "Franziska", image: "Franziska-Kunz.jpg" },
-        { name: "monika", image: "QF_Monika-Wolf.jpg" },
-        { name: "Anna", image: "QF_Anna-Bouwmeester.jpg" },
-        { name: "Fabian", image: "iFabian-von-Bueren.jpg" },
-    ];
-    
-    var results = [];
-    for (var i = 0; i < items.length; i++) {
-        if (items[i].name.toLowerCase().indexOf(keyword) !== -1) {
-            results.push(items[i]);
+      .searchdiv{
+          margin: 9px;
+      }
+      .halldiv .hall{
+          display: flex;
+          background-color: yellow;
+          justify-content: center;
+          margin-top: 5px;
+          font-size: xx-large;
+      }
+      .fabo{
+          width: 150px;
+      }
+      @keyframes back {
+        10%{
+          background-color: red;
         }
-    }
-    
-    var resultsDiv = document.getElementById("results");
-    resultsDiv.innerHTML = "";
-    if (results.length > 0) {
-        resultsDiv.innerHTML += "<h3>Ergebnisse für '" + keyword + "':</h3>";
-        for (var j = 0; j < results.length; j++) {
-      
-            resultsDiv.innerHTML += "<div>";
-            resultsDiv.innerHTML += "<img src='" + results[j].image + "' alt='" + results[j].name + "' style='width: 100px; height: 100px;'>";
-            resultsDiv.innerHTML += "<p>" + results[j].name + "</p>";
-            resultsDiv.innerHTML += "</div>";
+        30%{
+          background-color: green;
         }
-    } else {
-        resultsDiv.innerHTML += "<p> keine'" + keyword + "' gefunden.</p>";
+        23%{
+          background-color: blue;
+  
+        }
+        40%{
+          background-color: yellow;
+        }
+  
+      }
+      .fabodiv{
+          margin-top: 30px;
+          animation: back 2s linear infinite;
+      }
+  
+      .butt{
+          height: 5vh;
+          color: rgb(236, 230, 230);
+          background-color: blue;
+      }
+      .buttdiv{
+          text-align: center;
+      }
+  
+  </style>
+  <script>
+    function search() {
+      alert("was willst du suchen, das ist alles was du gerade ansiehst, kein andere mehr")
     }
-}
-</script>
-
-</body>
-</html>
+  </script>
