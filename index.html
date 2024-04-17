@@ -17,7 +17,7 @@
  </div>
  <nav>
   <div class="deutdiv">
-    <button onclick="tus()" class="deut">Deutsch</button>
+    <button onclick="serach()" class="deut">Deutsch</button>
   </div>
   <div id="link" class="linkdiv">
     <a class="link" href="indexsom.html">Somali</a>
@@ -84,11 +84,9 @@
     }
     .deut{
         background-color: red;
-        height: 5vh;
+        height: 9vh;
+        width: 7vh;
         margin: 5px;
-    }
-    .deutdiv, .linkdiv{
-
     }
     .qualifutura{
         font-size: 19px;
@@ -169,7 +167,42 @@
 
 </style>
 <script>
-        function search(){
-            alert("Bis jetzt noch nicht gefunden suchst du an mich");
+function search() {
+    // Suchbegriff aus dem Eingabefeld abrufen
+    var keyword = document.getElementById("searchInput").value.toLowerCase();
+    
+    var items = [
+    { name: "Tobias", image: "Tobias-jaun.jpg" },
+        { name: "Marusso", image: "Marusso-Mavris.jpg" },
+        { name: "Franziska", image: "Franziska-Kunz.jpg" },
+        { name: "monika", image: "QF_Monika-Wolf.jpg" },
+        { name: "Anna", image: "QF_Anna-Bouwmeester.jpg" },
+        { name: "Fabian", image: "iFabian-von-Bueren.jpg" },
+    ];
+    
+    var results = [];
+    for (var i = 0; i < items.length; i++) {
+        if (items[i].name.toLowerCase().indexOf(keyword) !== -1) {
+            results.push(items[i]);
         }
+    }
+    
+    var resultsDiv = document.getElementById("results");
+    resultsDiv.innerHTML = "";
+    if (results.length > 0) {
+        resultsDiv.innerHTML += "<h3>Ergebnisse für '" + keyword + "':</h3>";
+        for (var j = 0; j < results.length; j++) {
+      
+            resultsDiv.innerHTML += "<div>";
+            resultsDiv.innerHTML += "<img src='" + results[j].image + "' alt='" + results[j].name + "' style='width: 100px; height: 100px;'>";
+            resultsDiv.innerHTML += "<p>" + results[j].name + "</p>";
+            resultsDiv.innerHTML += "</div>";
+        }
+    } else {
+        resultsDiv.innerHTML += "<p> keine'" + keyword + "' gefunden.</p>";
+    }
+}
 </script>
+
+</body>
+</html>
