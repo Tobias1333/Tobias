@@ -1,177 +1,359 @@
 <iDOCTYPE html>
-  <html lang="en">
-  <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Document</title>
-  </head>
-  <body>
-  <div class="all">
-    <div class="minudiv">
-      <img class="minu" src="minu.png.png" alt="">
-  </div>
-      <div class="searchdiv">
-        <a href="banee.html">
-   <input class="search" type="text"
-      placeholder="Such">
-        </a>
-  <button onclick="search()" id="search" class="searchbutt">Such</button>
-   </div>
-   <nav>
-    <div class="deutdiv">
-      <button onclick="tus()" class="deut">Deutsch</button>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+        body {
+  font-family: Arial, sans-serif;
+  background-color: #121215;
+}
+
+.solar-system {
+  position: relative;
+  width: 550px;
+  height: 580px;
+  font-family: Arial, sans-serif;
+  background-color: black;
+  margin: auto;
+  overflow: hidden;
+}
+
+/* Some positioning rules that are common for all objects */
+.orbit {
+  border: 1px dashed #666;
+}
+
+#sun, .orbit, .orbit + div, .orbit + div > div {
+	position: absolute;
+}
+
+#sun, .orbit, .orbit + div {
+	top: 50%;
+	left: 50%;
+}
+.orbit + div > div {
+	top: 0;
+  left: 50%;
+}
+
+.orbit, .orbit + div div, #earth {
+	border-radius: 50%;
+}
+
+
+/* Individual objects rules. They are pretty much the same for 
+all objects and basically only vary in orbit size 
+and planet size. And colors :) */
+
+#sun {
+	height: 200px;
+	width: 200px;
+	background-color: #fae20a;
+  margin-top: -100px; 
+  margin-left: -100px;
+  border-radius: 50%;
+  box-shadow: 0 0 84px orange;
+}
+
+#earth {
+	position: absolute;
+	top: 0;
+  left: 50%;
+  height: 50px;
+  width: 50px;
+  margin-left: -25px;
+  margin-top: -25px;    
+  border-radius: 50%;
+  box-shadow: 0 0 34px #3a4385;
+}
+
+.earth-orbit, .earth-spin {
+  width: 500px;
+  height: 500px;
+  margin-left: -250px;
+  margin-top: -250px;   
+}
+
+#moon {
+  margin-top: -6px;
+  margin-left: -6px;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0 0 14px #3a4385;
+}
+.moon-orbit, .moon-spin {
+  height: 90px;
+  width: 90px;
+  margin-top: -45px;
+  margin-left: -45px;
+  border-color: #447;
+}
+
+#venus {
+  margin-top: -20px;
+  margin-left: -20px;
+  height: 40px;
+  width: 40px;
+  background-color: #3498db;
+  box-shadow: 0 0 34px #3a4385;
+}
+.venus-orbit, .venus-spin {
+  margin-top: -185px;
+  margin-left: -185px;
+  width: 370px;
+  height: 370px;
+}
+
+#mercury {
+  margin-top: -13.5px;
+  margin-left: -13.5px;
+  height: 25px;
+  width: 25px;
+  background-color: #a65e22;
+  /* box-shadow: 0 0 34px #3a4385; */
+}
+
+.mercury-orbit, .mercury-spin {
+
+  width: 280px;
+  height: 280px;
+  margin-left: -140px;
+  margin-top: -140px;   
+}
+
+#mars {
+  margin-top: -16px;
+  margin-left: -16px;
+  height: 32px;
+  width: 32px;
+  background-color: #863222;
+  box-shadow: 0 0 14px #a64232;
+}
+
+.mars-orbit, .mars-spin {
+  width: 700px;
+  height: 700px;
+  margin-left: -350px;
+  margin-top: -350px;   
+}
+
+
+/* Spinning animations */
+
+@keyframes spin-right {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.earth-spin {
+  animation: spin-right 36.5s linear infinite;
+}
+.moon-spin {
+  animation: spin-right 3s linear infinite;
+}
+.venus-spin {
+  animation: spin-right 22s linear infinite;
+}
+.mercury-spin {
+  animation: spin-right 8.8s linear infinite;
+}
+.mars-spin {
+  animation: spin-right 68.7s linear infinite;
+}
+        </style>
+    </head>
+    <body>
+    <div class="all">
+      <div class="minudiv">
+        <img class="minu" src="minu.png.png" alt="">
     </div>
-    <div id="link" class="linkdiv">
-      <a class="link" href="indexsom.html">Somali</a>
-      <a class="link" href="">English</a>
-      <a class="link" href="">Arabic</a>
-  </div>
-  </nav>
-  </div>
-  <div class="halldiv">
-      <strong class="hall">
-          Hallo wilkomen
-      </strong>
-  </div>
-  <div class="fabodiv">
-      <h6>Hallo alle diese photo sind qualifutura
-       zur qualifutura website Click hier <a class="qualifutura" href="https://qualifutura.ch/">qualifutura</a></h6>
-      <img class="fabo" src="" alt="">
-      <img class="fabo" src="" alt="">
-      <img class="fabo" src="" alt="">
-      <img class="fabo" src="" alt="">
-      <img class="fabo" src="" alt="">
-      <img class="fabo" src="" alt="">
-  </div>
-  <div class="buttdiv">
-      <h5>wenn Sie Ihre Meinung äußern möchten hier bitte
-          aber keine schlechtes gerede
-      </h5>
-      <a href="indexfed.html">
-      <button class="butt">Feedback</button>
-      </a>
-  </div>
-  </body>
-  </html>
-  <script>
-    function tus(){
-      var link = document.getElementById("link");
-      if (link.style.display === "none") {
-        link.style.display = "block";
-      }
-      else{
-        link.style.display = "none"
-      }
-    }
-  </script>
+        <div class="searchdiv">
+          <a href="banee.html">
+     <input class="search" type="text"
+        placeholder="Such">
+          </a>
+    <button onclick="search()" id="search" class="searchbutt">Such</button>
+     </div>
+     <nav>
+      <div class="deutdiv">
+        <button onclick="tus()" class="deut">Deutsch</button>
+      </div>
+      <div id="link" class="linkdiv">
+        <a class="link" href="indexsom.html">Somali</a>
+        <a class="link" href="">English</a>
+        <a class="link" href="">Arabic</a>
+    </div>
+    </nav>
+    </div>
+    <div class="halldiv">
+        <strong class="hall">
+            Hallo wilkomen
+        </strong>
+    </div>
+    <br>
+    <div class="solar-system">
+        <div id="sun"></div>
   
-  <style>
-      body{
-          margin: 0;
-          background-image: url(window.png);
-       }
-      .all{
-          display: flex;
-          background-color: rgba(111, 117, 110, 0.5);
-          display: sticky;
-          top: 0;
-          justify-content: space-between;
-          height: 9vh;
+        <div class="orbit mercury-orbit"></div>
+        <div class="mercury-spin">
+          <div id="mercury"></div>
+        </div>
+  
+        <div class="orbit venus-orbit"></div>
+        <div class="venus-spin">
+          <div id="venus"></div>
+        </div>
+  
+        <div class="orbit earth-orbit"></div>
+        <div class="earth-spin">
+          <div class="orbit moon-orbit"></div>
+          <div class="moon-spin">
+            <div id="moon"></div>
+          </div>
+  
+          <img id="earth" src="https://dl.dropboxusercontent.com/u/55240438/temp_site_links/solarsystemcss/earth_small_150.jpg" />
+        </div>
+  
+        <div class="orbit mars-orbit"></div>
+        <div class="mars-spin">
+          <div id="mars"></div>
+        </div>
+      </div>
+    <div class="buttdiv">
+        <h5>wenn Sie Ihre Meinung äußern möchten hier bitte
+            aber keine schlechtes gerede
+        </h5>
+        <a href="indexfed.html">
+        <button class="butt">Feedback</button>
+        </a>
+    </div>
+    </body>
+    </html>
+    <script>
+      function tus(){
+        var link = document.getElementById("link");
+        if (link.style.display === "none") {
+          link.style.display = "block";
+        }
+        else{
+          link.style.display = "none"
+        }
       }
-      .minu{
-          width: 50px;
-          margin: 5px;
-          background-color: rgba(166, 173, 165, 0.514);
-          border-radius: 15px;
-      }
-      .deut{
-          background-color: red;
-          height: 5vh;
-          margin: 5px;
-      }
-      .qualifutura{
-          font-size: 19px;
-          color: blue;
-      }
-      .link{
-        display: block;
-        text-decoration: none;
+    </script>
+    
+    <style>
+        body{
+            margin: 0;
+            background-image: url(window.png);
+            font-family: Arial, sans-serif;
+         }
+        .all{
+            display: flex;
+            background-color: rgba(111, 117, 110, 0.5);
+            display: sticky;
+            top: 0;
+            justify-content: space-between;
+            height: 9vh;
+        }
+        .minu{
+            width: 50px;
+            margin: 5px;
+            background-color: rgba(166, 173, 165, 0.514);
+            border-radius: 15px;
+        }
+        .deut{
+            background-color: red;
+            height: 5vh;
+            margin: 5px;
+        }
+        .qualifutura{
+            font-size: 19px;
+            color: blue;
+        }
+        .link{
+          display: block;
+          text-decoration: none;
+            background-color: aquamarine;
+            box-shadow: 5px 5px 5px;
+            text-align: center;
+            margin: 5px;
+            color: black;
+        }
+        .link, .deut{
+          display: block;
+        }
+        .linkdiv{
           background-color: aquamarine;
           box-shadow: 5px 5px 5px;
-          text-align: center;
-          margin: 5px;
-          color: black;
-      }
-      .link, .deut{
-        display: block;
-      }
-      .linkdiv{
-        background-color: aquamarine;
-        box-shadow: 5px 5px 5px;
-      }
-      h5{
-          color: white;
-          background-color: black;
-      }
-      .search{
-          height: 4vh;
-          border: 1px solid black;
-          text-align: center;
-          background-color: antiquewhite;
-          height: 5vh;
-      }
-      .searchbutt{
-          background-color: black;
-          color: white;
-          height: 5vh;
-          width: 15vh
-      }
-      .searchdiv{
-          margin: 9px;
-      }
-      .halldiv .hall{
-          display: flex;
-          background-color: yellow;
-          justify-content: center;
-          margin-top: 5px;
-          font-size: xx-large;
-      }
-      .fabo{
-          width: 150px;
-      }
-      @keyframes back {
-        10%{
-          background-color: red;
         }
-        30%{
-          background-color: green;
+        h5{
+            color: white;
+            background-color: black;
         }
-        23%{
-          background-color: blue;
-  
+        .search{
+            height: 4vh;
+            border: 1px solid black;
+            text-align: center;
+            background-color: antiquewhite;
+            height: 5vh;
         }
-        40%{
-          background-color: yellow;
+        .searchbutt{
+            background-color: black;
+            color: white;
+            height: 5vh;
+            width: 15vh
         }
-  
+        .searchdiv{
+            margin: 9px;
+        }
+        .halldiv .hall{
+            display: flex;
+            background-color: yellow;
+            justify-content: center;
+            margin-top: 5px;
+            font-size: xx-large;
+        }
+        .fabo{
+            width: 150px;
+        }
+        @keyframes back {
+          10%{
+            background-color: red;
+          }
+          30%{
+            background-color: green;
+          }
+          23%{
+            background-color: blue;
+    
+          }
+          40%{
+            background-color: yellow;
+          }
+    
+        }
+        .fabodiv{
+            margin-top: 30px;
+            animation: back 2s linear infinite;
+        }
+    
+        .butt{
+            height: 5vh;
+            color: rgb(236, 230, 230);
+            background-color: blue;
+        }
+        .buttdiv{
+            text-align: center;
+        }
+    
+    </style>
+    <script>
+      function search() {
+        alert("was willst du suchen, das ist alles was du gerade ansiehst, kein andere mehr")
       }
-      .fabodiv{
-          margin-top: 30px;
-          animation: back 2s linear infinite;
-      }
-  
-      .butt{
-          height: 5vh;
-          color: rgb(236, 230, 230);
-          background-color: blue;
-      }
-      .buttdiv{
-          text-align: center;
-      }
-  
-  </style>
-  <script>
-    function search() {
-      alert("was willst du suchen, das ist alles was du gerade ansiehst, kein andere mehr")
-    }
-  </script>
+    </script>
