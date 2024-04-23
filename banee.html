@@ -5,16 +5,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Suche mit Bildern</title>
 <style>
+    body{
+        background-color: green;
+    }
     .all{
         position: absolute;
         top: 10%;
-        left: 10%;
+        left: 20%;
     }
     input, button{
         width: 25vh;
         height: 5vh;
     }
-    button{
+    .button{
         background-color: blue;
         color: white;
     }
@@ -27,7 +30,7 @@
     <div class="all">
         <form action="https://www.google.com/search" method="get">
             <input type="text" name="q" placeholder="Google such">
-            <input type="submit" value="Suchen">
+            <input class="button" type="submit" value="Suchen">
         </form>
     </div>
 
