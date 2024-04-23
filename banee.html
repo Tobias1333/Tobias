@@ -23,15 +23,15 @@
     }
 </style>
 </head>
-<body class="all">
-<div>
-<h2>Suche SIE</h2>
-
-<input type="text" id="searchInput" placeholder="Suchbegriff eingeben">
-<button onclick="search()">Suchen</button>
+<body>
+    <div class="all">
+        <form action="https://www.google.com/search" method="get">
+            <input type="text" name="q" placeholder="Google such">
+            <input type="submit" value="Suchen">
+        </form>
+    </div>
 
 <div id="results"></div>
-</div>
 
 <script>
 function search() {
